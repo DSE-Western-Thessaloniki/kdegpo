@@ -1,31 +1,32 @@
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
-    <using prefix="windows"
-           namespace="Microsoft.Policies.Windows" />
+    <target prefix="fullarmor" namespace="FullArmor.Policies.1CB1077B_DF17_43FB_BC91_8AB3BA8D131D" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <supersededAdm fileName="" />
   <resources minRequiredRevision="1.0" />
   <categories>
-    <category name="CAT_KDE"
-              displayName="$(string.CAT_KDE)" />
-    <category name="CAT_AUTOSTART"
-              displayName="$(string.CAT_AUTOSTART)">
-      <parentCategory ref="CAT_KDE" />
+    <category name="CAT_2528B735_F38D_4AED_90E7_3C7AE1B57782" displayName="$(string.CAT_2528B735_F38D_4AED_90E7_3C7AE1B57782)" />
+    <category name="CAT_61AD130B_F4F1_4ADC_B9BC_2F828111E225" displayName="$(string.CAT_61AD130B_F4F1_4ADC_B9BC_2F828111E225)">
+      <parentCategory ref="CAT_2528B735_F38D_4AED_90E7_3C7AE1B57782" />
+    </category>
+    <category name="CAT_2D6137C4_D193_4A6F_B2E4_3B5988493543" displayName="$(string.CAT_2D6137C4_D193_4A6F_B2E4_3B5988493543)">
+      <parentCategory ref="CAT_2528B735_F38D_4AED_90E7_3C7AE1B57782" />
     </category>
   </categories>
   <policies>
-    <policy name="POL_AUTOSTART_SCRIPTS" class="Machine"
-            displayName="$(string.POL_AUTOSTART_SCRIPTS)"
-        explainText="$(string.POL_AUTOSTART_SCRIPTS_Help)"
-        presentation="$(presentation.POL_AUTOSTART_SCRIPTS)"
-        key="Software\Policies\Kde\Autostart">
-      <parentCategory ref="CAT_AUTOSTART" />
+    <policy name="POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577" class="Both" displayName="$(string.POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577)" explainText="$(string.POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577_Help)" presentation="$(presentation.POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577)" key="Software\Policies\KDE\Autostart" valueName="Autostart scripts">
+      <parentCategory ref="CAT_61AD130B_F4F1_4ADC_B9BC_2F828111E225" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <elements>
-        <list id="LST_AUTOSTART_SCRIPTS"
-          key="Software\Policies\Kde\
-               Autostart\Autostart Scripts"
-          valueName="Autostart Scripts" />
+        <list id="LST_82649192_DD75_4279_8BF1_DC920D8F3DA1" key="Software\Policies\KDE\Autostart\Autostart Scripts" valueName="Autostart scripts" />
+      </elements>
+    </policy>
+    <policy name="POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905" class="User" displayName="$(string.POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905)" explainText="$(string.POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905_Help)" presentation="$(presentation.POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905)" key="Software\Policies\Kde\kio" valueName="kio automount">
+      <parentCategory ref="CAT_2D6137C4_D193_4A6F_B2E4_3B5988493543" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <list id="LST_82F3F9FE_F526_4CB0_9E8A_1BD125BDAD3A" key="Software\Policies\Kde\kio\Mount points" valueName="kio automount" />
       </elements>
     </policy>
   </policies>

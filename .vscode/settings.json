@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"*.admx": "xml",
+		"*.adml": "xml",
+	}
+}

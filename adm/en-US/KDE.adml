@@ -5,19 +5,20 @@
   </description>
   <resources>
     <stringTable>
-      <string id="CAT_SAMBA">Samba</string>
-      <string id="CAT_UNIX_SETTINGS">Unix Settings</string>
-      <string id="POL_DAILY_SCRIPTS">Daily Scripts</string>
-      <string id="POL_DAILY_SCRIPTS_Help">
-        This policy setting allows you to execute commands, 
-        either local or on remote storage, daily.
-      </string>
+      <string id="CAT_2528B735_F38D_4AED_90E7_3C7AE1B57782">KDE</string>
+      <string id="CAT_61AD130B_F4F1_4ADC_B9BC_2F828111E225">Autostart</string>
+      <string id="CAT_2D6137C4_D193_4A6F_B2E4_3B5988493543">kio</string>
+      <string id="POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577">Autostart scripts</string>
+      <string id="POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577_Help">This policy setting allows you to execute commands when logging in KDE.</string>
+      <string id="POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905">Automount</string>
+      <string id="POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905_Help">This policy setting allows you to automount remote mount points using kio when logging in KDE. It creates a link to the mount point on the desktop of the user</string>
     </stringTable>
     <presentationTable>
-      <presentation id="POL_DAILY_SCRIPTS">
-        <listBox refId="LST_DAILY_SCRIPTS">
-      Script and arguments
-        </listBox>
+      <presentation id="POL_E71B6B59_6AD4_43B0_8A4B_1F638E89B577">
+        <listBox refId="LST_82649192_DD75_4279_8BF1_DC920D8F3DA1">Autostart Scripts</listBox>
+      </presentation>
+      <presentation id="POL_B6A69C08_B873_41AC_95B4_1BE37CE3E905">
+        <listBox refId="LST_82F3F9FE_F526_4CB0_9E8A_1BD125BDAD3A">Mount points</listBox>
       </presentation>
     </presentationTable>
   </resources>
