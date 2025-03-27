@@ -1,0 +1,32 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <using prefix="windows"
+           namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="CAT_KDE"
+              displayName="$(string.CAT_KDE)" />
+    <category name="CAT_AUTOSTART"
+              displayName="$(string.CAT_AUTOSTART)">
+      <parentCategory ref="CAT_KDE" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="POL_AUTOSTART_SCRIPTS" class="Machine"
+            displayName="$(string.POL_AUTOSTART_SCRIPTS)"
+        explainText="$(string.POL_AUTOSTART_SCRIPTS_Help)"
+        presentation="$(presentation.POL_AUTOSTART_SCRIPTS)"
+        key="Software\Policies\Kde\Autostart">
+      <parentCategory ref="CAT_AUTOSTART" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <list id="LST_AUTOSTART_SCRIPTS"
+          key="Software\Policies\Kde\
+               Autostart\Autostart Scripts"
+          valueName="Autostart Scripts" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>
